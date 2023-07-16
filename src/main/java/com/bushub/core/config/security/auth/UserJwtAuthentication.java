@@ -1,4 +1,4 @@
-package com.bushub.core.security.auth;
+package com.bushub.core.config.security.auth;
 
 import com.bushub.core.management.user.UserRole;
 import lombok.Getter;

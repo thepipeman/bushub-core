@@ -1,6 +1,6 @@
 package com.bushub.core.config.security;
 
-import com.bushub.core.security.jwt.BushubJwtAuthConverter;
+import com.bushub.core.config.security.jwt.BushubJwtAuthConverter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
