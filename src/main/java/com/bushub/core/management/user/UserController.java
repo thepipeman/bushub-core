@@ -1,5 +1,6 @@
 package com.bushub.core.management.user;
 
+import com.bushub.core.security.auth.UserJwtAuthentication;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,6 +33,11 @@ public class UserController {
     }
 
     return ResponseEntity.ok(users);
+  }
+
+  @GetMapping("/me")
+  public String getName(UserJwtAuthentication authentication) {
+    return authentication.getName();
   }
 
 }
