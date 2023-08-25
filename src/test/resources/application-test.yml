@@ -6,8 +6,8 @@ spring:
   profiles:
     active: test
   datasource:
-    jdbc-url: jdbc:h2:mem:nextbank_migration
-    url: jdbc:h2:mem:nextbank_migration
+#    jdbc-url: jdbc:h2:mem:bh_core
+    url: jdbc:h2:mem:bh_core
     driver-class-name: org.h2.Driver
   flyway:
     enabled: false
