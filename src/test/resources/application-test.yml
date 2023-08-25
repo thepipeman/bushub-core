@@ -3,10 +3,8 @@
 #------------------------------------
 
 spring:
-  profiles:
-    active: test
   datasource:
-#    jdbc-url: jdbc:h2:mem:bh_core
+    jdbc-url: jdbc:h2:mem:bh_core
     url: jdbc:h2:mem:bh_core
     driver-class-name: org.h2.Driver
   flyway:
