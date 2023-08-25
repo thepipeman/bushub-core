@@ -1,5 +1,6 @@
 package com.bushub.core.reservation.booking;
 
+import com.bushub.core.config.security.auth.ReservationEndpoint;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +17,7 @@ public class BookingController {
 
   private final BookingService bookingService;
 
+  @ReservationEndpoint
   @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
   public long reserveBooking(@Valid @RequestBody Booking booking) {
     return bookingService.create(booking);

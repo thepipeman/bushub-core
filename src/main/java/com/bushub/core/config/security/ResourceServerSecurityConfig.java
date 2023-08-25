@@ -20,10 +20,7 @@ public class ResourceServerSecurityConfig {
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
     httpSecurity
-      .authorizeHttpRequests()
-      .anyRequest()
-      .authenticated()
-      .and()
+      .authorizeHttpRequests(customizer -> customizer.anyRequest().authenticated())
       .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwtConfigurer ->
           jwtConfigurer.jwtAuthenticationConverter(jwtAuthConverter)
         )
